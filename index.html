@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery弹窗封装</title>
+    <link rel="stylesheet" href="./css/pop.css"/>
+    <script src="./js/jquery-3.5.0.js"></script>
+    <script src="./js/jquery.myPop.js"></script>
+</head>
+<body>
+    <!-- <div id="id">我要调用弹窗</div> -->
+    <a href="javascript:void(0);" class="pop-click">点击弹窗(仿bootstrap)</a>
+    <div id="pop-back"></div>
+    <div id="pop-content">
+        <div class="pop-head">
+            <h4>头部头部头部头部头部头部头部头部头部头部头部头部头部</h4>
+        </div>
+        <div class="pop-body">
+            <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+        </div>
+        <div class="pop-foot">
+            <button id="pop-close">关闭</button>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            var myTxt = {
+                'txt': '自定义内容',
+                'bodyBg': 'green'
+            }
+
+            $('.pop-click').on('click', function(){
+                $('#pop-content').popPlugin(myTxt).popTxt();
+                $('#pop-content').popPlugin(myTxt).popBgcolor();
+            })
+        })
+    </script>
+</body>
+</html>
